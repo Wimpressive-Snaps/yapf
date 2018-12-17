@@ -1,0 +1,21 @@
+name: yapf
+base: core18
+version: 'git'
+summary: A formatter for Python files
+description: >
+  
+
+grade: stable
+confinement: strict
+
+parts:
+  yapf:
+    plugin: python
+    source: .
+
+apps:
+  yapf:
+    command: bin/yapf
+    plugs:
+      - home
+      - removable-media
